@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bridging the Digital Divide</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: url('https://uploads.onecompiler.io/43mj437ft/43r6dag5c/1000036622.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #333;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, rgba(247, 230, 255, 0.85), rgba(255, 253, 231, 0.85));
+      z-index: -1;
+    }
+
+    header {
+      background: url('https://uploads.onecompiler.io/43mj437ft/43r6dag5c/1000036637.jpg') no-repeat center center;
+      background-size: cover;
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      color: white;
+      font-size: 2.5rem;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+      letter-spacing: 1px;
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      list-style: none;
+      padding: 0;
+      margin: 10px 0 0;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      padding: 40px 20px;
+      max-width: 800px;
+      margin: auto;
+      background-color: rgba(255, 235, 59, 0.5); /* transparent yellow */
+      margin-top: 20px;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    h1, h2 {
+      color: #6a1b9a;
+    }
+
+    button {
+      background-color: #fdd835;
+      color: #4a148c;
+      border: none;
+      padding: 12px 18px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background-color: #ffeb3b;
+    }
+
+    a {
+      color: #6a1b9a;
+      text-decoration: underline;
+    }
+
+    a:hover {
+      color: #4a148c;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    input, textarea {
+      padding: 10px;
+      border: 2px solid #ce93d8;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    footer {
+      background-color: #4a148c;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 30px;
+    }
+
+    @media (max-width: 600px) {
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+  <script>
+    function toggleInfo(id) {
+      const section = document.getElementById(id);
+      section.style.display = section.style.display === 'none' ? 'block' : 'none';
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <h1>🌐 Bridging the Digital Divide for a Brighter Future</h1>
+    <nav>
+      <ul>
+        <li><a href="#problem">Problem</a></li>
+        <li><a href="#solution">Solution</a></li>
+        <li><a href="#roadmap">Roadmap</a></li>
+        <li><a href="#courses">Courses</a></li>
+        <li><a href="#form">Query</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="problem">
+    <h2>The Problem</h2>
+    <p>The digital divide continues to widen in developing areas, especially among underprivileged communities lacking access to education and digital tools. This limits opportunities and deepens inequality.</p>
+  </section>
+
+  <section id="solution">
+    <h2>Our Solution</h2>
+    <p>We aim to connect these communities to educational resources, training programs, and government schemes through an accessible, mobile-friendly website. This bridges the digital gap and empowers individuals.</p>
+  </section>
+
+  <section id="roadmap">
+    <h2>Roadmap</h2>
+    <ul>
+      <li>Phase 1: Awareness & Outreach</li>
+      <li>Phase 2: Free Courses & Digital Literacy</li>
+      <li>Phase 3: Job Opportunities & Skill Building</li>
+    </ul>
+  </section>
+
+  <section id="courses">
+    <h2>Digital Courses Guide</h2>
+    <button onclick="Info('intro')">📘 Introduction to Digital Literacy</button>
+    <div id="intro" style="display:none; margin-top:10px">
+      <p>This course introduces basic computer and smartphone skills, internet usage, and safety.</p>
+      <a href="https://www.coursera.org/learn/digital-literacy" target="_blank">Apply Here</a>
+    </div>
+
+    <button onclick="Info('coding')">💻 Free Coding Bootcamp</button>
+    <div id="coding" style="display:none; margin-top:10px">
+      <p>Beginner-friendly bootcamp teaching HTML, CSS, JavaScript, and real-world projects.</p>
+      <a href="https://www.freecodecamp.org/" target="_blank">Apply Here</a>
+    </div>
+
+    <button onclick="Info('govt')">📑 Government Skill Schemes</button>
+    <div id="govt" style="display:none; margin-top:10px">
+      <p>Explore PMGDISHA, Skill India, and other schemes aimed at enhancing employability.</p>
+      <a href="https://www.pmgdisha.in/" target="_blank">Learn More</a>
+    </div>
+  </section>
+
+  <section id="form">
+    <h2>Submit Your Query</h2>
+    <form onsubmit="event.preventDefault(); alert('Thank you for your query!');">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea placeholder="Your Query" required></textarea>
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Bridging the Digital Divide</p>
+  </footer>
+</body>
+</html>
